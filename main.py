@@ -24,5 +24,9 @@ training_df = chicago_taxi_dataset[['TRIP_MILES', 'TRIP_SECONDS', 'FARE', 'COMPA
 #print('Total number of rows: {0}\n\n'.format(len(training_df.index)))
 #training_df.head(200)
 
-print('Total number of rows: {0}\n\n'.format(len(training_df.index)))
-training_df.describe(include='all')
+#print('Total number of rows: {0}\n\n'.format(len(training_df.index)))
+#training_df.describe(include='all')
+
+
+#view correlation matrix, 1 means high correlation, -1 inverse correlation, 0 no correlation
+training_df.corr(numeric_only = True)
