@@ -29,4 +29,7 @@ training_df = chicago_taxi_dataset[['TRIP_MILES', 'TRIP_SECONDS', 'FARE', 'COMPA
 
 
 #view correlation matrix, 1 means high correlation, -1 inverse correlation, 0 no correlation
-training_df.corr(numeric_only = True)
+#training_df.corr(numeric_only = True)
+
+#View pairplot, it shows graphs correlating variables
+sns.pairplot(training_df, x_vars=["FARE", "TRIP_MILES", "TRIP_SECONDS"], y_vars=["FARE", "TRIP_MILES", "TRIP_SECONDS"])
